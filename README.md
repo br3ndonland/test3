@@ -1,10 +1,24 @@
-# Python template repository
+# Getting Started Testing: pytest edition
 
 Brendon Smith ([br3ndonland](https://github.com/br3ndonland/))
 
 ## Description
 
-**Welcome!** This is a template repository for Python projects, engineered for use as a [GitHub template repository](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+This repository contains material from the Boston Python User Group's meetup on February 26, 2020, "[Getting Started Testing: pytest edition](https://www.meetup.com/bostonpython/events/266720542/)," led by Ned Batchelder. The slides and code from Ned Batchelder are available [here](https://nedbatchelder.com/text/test3.html). Meetup info:
+
+> Presentation night sponsored by Kyruus, hosted by PTC.
+>
+> Ned Batchelder, Getting Started Testing
+>
+> Do you want to learn how to write automated tests in Python with pytest? We'll start from the very beginning! See how pytest works, and how to write tests. Once the basics are covered, we'll get into fixtures, parameterization, and coverage measurement. Then we'll do a few more advanced topics: including test doubles (mocks and fakes).
+>
+> It's a lot to cover, but we'll take our time and work through it. You'll get everything you need to start writing your own tests.
+>
+> The talk is available now if you want a preview: https://bit.ly/pytest3
+>
+> Doors open at 5:30 for mingling, networking, and exploring the PTC tech space. The presentation starts at 6:30.
+
+This repository was generated from my [template-python repository](https://github.com/br3ndonland/template-python). For more info on template repositories, see [GitHub's announcement](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
 
 ## Repository contents
 

@@ -1,8 +1,7 @@
 # Getting Started Testing: pytest edition
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-![pre-commit](https://github.com/br3ndonland/test3/workflows/pre-commit/badge.svg)
+![Test](https://github.com/br3ndonland/test3/workflows/Test/badge.svg)
 
 Brendon Smith ([br3ndonland](https://github.com/br3ndonland/))
 
@@ -33,8 +32,7 @@ This repository was generated from my [template-python repository](https://githu
     - [bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md): template for filing a bug report issue on GitHub.
     - [feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md): template for filing a feature request issue on GitHub.
   - [workflows/](.github/workflows)
-    - [pre-commit.yml](.github/workflows/pre-commit.yml): [GitHub Actions](https://github.com/features/actions) workflow that runs pre-commit with each pull request or push to the master branch.
-    - [test.yml](.github/workflows/test.yml): [GitHub Actions](https://github.com/features/actions) workflow (currently disabled) that runs Python tests with [coverage](https://github.com/nedbat/coveragepy).
+    - [test.yml](.github/workflows/test.yml): [GitHub Actions](https://github.com/features/actions) workflow that checks code formatting and runs tests.
   - [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md): guidelines for behavior when contributing to open-source projects.
   - [CONTRIBUTING.md](.github/CONTRIBUTING.md): detailed instructions for using this repository.
 - [.vscode/settings.json](.vscode/settings.json): default settings for [VSCode](https://code.visualstudio.com/).

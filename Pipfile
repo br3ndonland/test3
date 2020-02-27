@@ -9,8 +9,11 @@ mypy = "*"
 flake8 = "*"
 
 [packages]
-pytest = "*"
+coverage = "*"
+mock = "*"
 pre-commit = "*"
+pytest = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"

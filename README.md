@@ -48,6 +48,7 @@ This repository was generated from my [template-python repository](https://githu
   - Set up, act, assert.
   - See [test_port1_pytest.py](tests/test_port1_pytest.py) for a good example.
   - Try it: `pytest -q tests/test_port1_pytest.py`
+  - To skip tests that are intentionally broken for the sake of example (in the modules ending in _broken.py_), either tell pytest to skip them at run time with `pytest -k "not broken"`, or [mark the tests as expected to fail and skip them](https://docs.pytest.org/en/latest/skipping.html) with `import pytest` and then by adding `@pytest.mark.xfail()` as a decorator above the applicable test function.
 - Test isolation (slide 27):
   - Tests shouldn't affect each other.
   - If one test fails, it shouldn't stop the subsequent tests.

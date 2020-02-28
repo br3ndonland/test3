@@ -1,5 +1,5 @@
 # test_port4_pytest_broken.py
-
+import pytest
 from portfolio1 import Portfolio
 
 
@@ -21,6 +21,7 @@ def test_buy_two_stocks():
     assert p.cost() == 21263.0
 
 
+@pytest.mark.xfail(reason="Demonstration of failed test")
 def test_bad_input():
     p = Portfolio()
     p.buy("IBM")

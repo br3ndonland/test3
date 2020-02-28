@@ -1,7 +1,9 @@
 # Getting Started Testing: pytest edition
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![Test](https://github.com/br3ndonland/test3/workflows/Test/badge.svg)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+![pre-commit](https://github.com/br3ndonland/test3/workflows/pre-commit/badge.svg)
+![test](https://github.com/br3ndonland/test3/workflows/test/badge.svg)
 
 Brendon Smith ([br3ndonland](https://github.com/br3ndonland/))
 

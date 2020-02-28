@@ -9,6 +9,7 @@ class PortfolioTest(unittest.TestCase):
         p = Portfolio()
         self.assertEqual(p.cost(), 0.0)
 
+    @unittest.expectedFailure
     def test_buy_one_stock(self):
         p = Portfolio()
         p.buyXX("IBM", 100, 176.48)

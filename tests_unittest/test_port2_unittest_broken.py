@@ -9,6 +9,7 @@ class PortfolioTest(unittest.TestCase):
         p = Portfolio()
         assert p.cost() == 0.0
 
+    @unittest.expectedFailure
     def test_buy_one_stock(self):
         p = Portfolio()
         p.buy("IBM", 100, 176)  # this is wrong, to make the test fail!

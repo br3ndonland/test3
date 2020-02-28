@@ -20,6 +20,7 @@ class PortfolioTest(unittest.TestCase):
         p.buy("HPQ", 100, 36.15)
         self.assertEqual(p.cost(), 21263.0)
 
+    @unittest.expectedFailure
     def test_bad_input(self):
         p = Portfolio()
         p.buy("IBM")

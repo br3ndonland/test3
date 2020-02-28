@@ -23,6 +23,9 @@
   "python.linting.flake8Args": ["--max-line-length", "88"],
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": false,
   "python.pythonPath": "/usr/local/bin/python3",
   "python.venvPath": "${workspaceFolder}/venv/bin/python",
   "[yaml]": {

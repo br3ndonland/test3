@@ -7,11 +7,10 @@ on:
 
 jobs:
   pre-commit:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.7, 3.8]
-        os: [ubuntu-latest, macOS-latest]
     steps:
       - uses: actions/checkout@v2.0.0
       - name: Set up Python ${{ matrix.python-version }}

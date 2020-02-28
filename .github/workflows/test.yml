@@ -31,5 +31,5 @@ jobs:
           prettier --check "**/*.*css" "**/*.html" "**/*.js*" "**/*.md" "**/*.vue" "**/*.y*ml"
           python -m black .
           python -m flake8 . --max-line-length=88
-      # - name: Run unit tests
-      #   run: pytest -k "not broken"
+      - name: Run unit tests
+        run: coverage run -m pytest tests

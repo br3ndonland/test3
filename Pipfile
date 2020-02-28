@@ -5,14 +5,15 @@ verify_ssl = true
 
 [dev-packages]
 black = "*"
-mypy = "*"
 flake8 = "*"
+mypy = "*"
 
 [packages]
 coverage = "*"
 mock = "*"
 pre-commit = "*"
 pytest = "*"
+pytest-mock = "*"
 requests = "*"
 
 [requires]

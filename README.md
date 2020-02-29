@@ -45,12 +45,12 @@ This repository was generated from my [template-python repository](https://githu
 - Project structure (slide 21)
   - Put your tests in the _tests/_ directory.
   - When I moved the tests to the _tests/_ directory, pytest started throwing a `ModuleNotFoundError`. Pytest could find the tests in the _tests/_ directory, but the tests couldn't find the modules they were importing from the root directory. The solution, as explained on [Stack Overflow](https://stackoverflow.com/questions/10253826), is to simply create an empty _conftest.py_ file in the root directory. This seems strange to me.
-  - Another related issue: pytest will attempt to run the unittest modules as well. I moved them to a separate directory to avoid running them.
 - Running tests (slide 22)
   - Set up, act, assert.
   - See [test_port1_pytest.py](tests/test_port1_pytest.py) for a good example.
   - Try it: `pytest -q tests/test_port1_pytest.py`
   - To skip tests that are intentionally broken for the sake of example (in the modules ending in _broken.py_), either tell pytest to skip them at run time with `pytest -k "not broken"`, or [mark the tests as expected to fail and skip them](https://docs.pytest.org/en/latest/skipping.html) with `import pytest` and then by adding `@pytest.mark.xfail()` as a decorator above the applicable test function.
+  - `unittest` provides a similar `@unittest.expectedFailure` decorator.
 - Test isolation (slide 27):
   - Tests shouldn't affect each other.
   - If one test fails, it shouldn't stop the subsequent tests.

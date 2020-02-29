@@ -45,6 +45,7 @@ This repository was generated from my [template-python repository](https://githu
 - Project structure (slide 21)
   - Put your tests in the _tests/_ directory.
   - When I moved the tests to the _tests/_ directory, pytest started throwing a `ModuleNotFoundError`. Pytest could find the tests in the _tests/_ directory, but the tests couldn't find the modules they were importing from the root directory. The solution, as explained on [Stack Overflow](https://stackoverflow.com/questions/10253826), is to simply create an empty _conftest.py_ file in the root directory. This seems strange to me.
+  - An alternative recommended in the [pytest docs under "Good Integration practices"](https://docs.pytest.org/en/latest/goodpractices.html) is to create a _setup.py_ file and then run `pip install -e .`.
 - Running tests (slide 22)
   - Set up, act, assert.
   - See [test_port1_pytest.py](tests/test_port1_pytest.py) for a good example.

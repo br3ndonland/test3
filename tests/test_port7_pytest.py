@@ -2,7 +2,7 @@
 
 import pytest
 
-from portfolio3 import Portfolio
+from portfolio.portfolio3 import Portfolio
 
 
 def test_empty():

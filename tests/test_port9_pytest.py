@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from portfolio3 import Portfolio
+from portfolio.portfolio3 import Portfolio
 
 # import portfolio3
 
@@ -59,7 +59,7 @@ def test_dont_own_it(simple_portfolio):
 
 def test_value(simple_portfolio, mocker):
     req_get = mocker.patch(
-        "portfolio3.requests.get",
+        "portfolio.portfolio3.requests.get",
         return_value=SimpleNamespace(text="\nDELL,,,140\nORCL,,,32\nMSFT,,,51\n"),
     )
     assert simple_portfolio.value() == 22300

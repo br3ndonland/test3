@@ -1,6 +1,6 @@
 # test_port1_pytest.py
 
-from portfolio1 import Portfolio
+from portfolio.portfolio1 import Portfolio
 
 
 def test_buy_one_stock():

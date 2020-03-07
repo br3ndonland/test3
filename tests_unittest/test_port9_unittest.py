@@ -5,7 +5,7 @@ from types import SimpleNamespace
 
 import mock
 
-from portfolio3 import Portfolio
+from portfolio.portfolio3 import Portfolio
 
 
 class PortfolioTest(unittest.TestCase):
@@ -59,7 +59,7 @@ class PortfolioValueTest(unittest.TestCase):
 
     def test_value(self):
         # Create a mock requests.get.
-        with mock.patch("portfolio3.requests.get") as req_get:
+        with mock.patch("portfolio.portfolio3.requests.get") as req_get:
 
             # When called, it will return this value:
             req_get.return_value = SimpleNamespace(text="\nIBM,,,140\nHPQ,,,32\n")

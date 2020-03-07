@@ -4,8 +4,8 @@ from types import SimpleNamespace
 
 import pytest
 
-from portfolio3 import Portfolio
-import portfolio3
+from portfolio.portfolio3 import Portfolio
+import portfolio.portfolio3
 
 
 def test_empty():
@@ -64,10 +64,10 @@ class FakeRequests:
 
 @pytest.fixture
 def fake_requests():
-    old_requests = portfolio3.requests
-    portfolio3.requests = FakeRequests()
+    old_requests = portfolio.portfolio3.requests
+    portfolio.portfolio3.requests = FakeRequests()
     yield
-    portfolio3.requests = old_requests
+    portfolio.portfolio3.requests = old_requests
 
 
 def test_value(simple_portfolio, fake_requests):

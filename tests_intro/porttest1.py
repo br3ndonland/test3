@@ -1,5 +1,5 @@
 # porttest1.py
-from portfolio1 import Portfolio
+from portfolio.portfolio1 import Portfolio
 
 p = Portfolio()
 print(f"Empty portfolio cost: {p.cost()}")

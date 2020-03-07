@@ -1,6 +1,6 @@
 # test_port4_pytest_broken.py
 import pytest
-from portfolio1 import Portfolio
+from portfolio.portfolio1 import Portfolio
 
 
 def test_empty():

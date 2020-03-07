@@ -1,7 +1,7 @@
 # test_port1_unittest.py
 
 import unittest
-from portfolio1 import Portfolio
+from portfolio.portfolio1 import Portfolio
 
 
 class PortfolioTest(unittest.TestCase):

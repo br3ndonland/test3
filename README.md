@@ -45,7 +45,7 @@ This repository was generated from my [template-python repository](https://githu
 - Project structure (slide 21)
   - Put your tests in the _tests/_ directory.
   - When I moved the tests to the _tests/_ directory, pytest started throwing a `ModuleNotFoundError`. Pytest could find the tests in the _tests/_ directory, but the tests couldn't find the modules they were importing from the root directory. The solution, as explained on [Stack Overflow](https://stackoverflow.com/questions/10253826), is to simply create an empty _conftest.py_ file in the root directory. This seems strange to me.
-  - An alternative recommended in the [pytest docs under "Good Integration practices"](https://docs.pytest.org/en/latest/goodpractices.html) is to create a _setup.py_ file and then run `pip install -e .`.
+  - An alternative recommended in the [pytest docs under "Good Integration practices"](https://docs.pytest.org/en/latest/goodpractices.html) is to create a _setup.py_ file and then run `pip install -e .`. This project doesn't need a separate `setup.py` because it's managed automatically by Poetry.
 - Running tests (slide 22)
   - Set up, act, assert.
   - See [test_port1_pytest.py](tests/test_port1_pytest.py) for a good example.
@@ -63,23 +63,29 @@ This repository was generated from my [template-python repository](https://githu
     - [bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md): template for filing a bug report issue on GitHub.
     - [feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md): template for filing a feature request issue on GitHub.
   - [workflows/](.github/workflows)
-    - [test.yml](.github/workflows/test.yml): [GitHub Actions](https://github.com/features/actions) workflow that checks code formatting and runs tests.
+    - [pre-commit.yml](.github/workflows/pre-commit.yml): [GitHub Actions](https://github.com/features/actions) workflow that runs the pre-commit hooks specified in [.pre-commit-config.yaml](.pre-commit-config.yaml).
+    - [test.yml](.github/workflows/test.yml): [GitHub Actions](https://github.com/features/actions) workflow that runs Python tests.
   - [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md): guidelines for behavior when contributing to open-source projects.
   - [CONTRIBUTING.md](.github/CONTRIBUTING.md): detailed instructions for using this repository.
+  - [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md): template for submitting [GitHub pull requests](.github/CONTRIBUTING.md).
 - [.vscode/settings.json](.vscode/settings.json): default settings for [VSCode](https://code.visualstudio.com/).
 - [.pre-commit-config.yaml](.pre-commit-config.yaml): configuration file for [pre-commit](https://pre-commit.com/) specifying [Git pre-commit hooks](https://www.git-scm.com/docs/githooks).
 - [LICENSE](LICENSE): [license](https://choosealicense.com/) file describing how the repository may be legally used.
-- [Pipfile](Pipfile): [Pipenv](https://pipenv.readthedocs.io/) package list
+- [poetry.lock](poetry.lock): lock file used by [Poetry](https://python-poetry.org/) to install specific versions of each dependency.
+- [pyproject.toml](pyproject.toml): configuration file for [Poetry](https://python-poetry.org/).
 - [README.md](README.md): this file, a concise description of the repository
-- [setup.py](setup.py): this file helps Python understand your project structure and locate files, even if you're not going to publish your project as a Python package on [PyPI](https://pypi.org/). For example, if your tests are in a sub-directory like _test/_, adding _setup.py_ helps pytest locate Python modules to load when running tests. To tell Python to read your _setup.py_ file, simply run `pip install -e .` as described in [quickstart](#quickstart). For more info, see the [`pip install -e` docs](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs) and the [pytest docs on good integration practices](https://docs.pytest.org/en/latest/goodpractices.html).
 
 ## Quickstart
 
 ```sh
 ❯ cd path/to/repo
-❯ pipenv install --dev
-❯ pipenv shell
-template-python-hash ❯ pre-commit install
+# Install virtual environment with poetry: https://python-poetry.org/docs/
+❯ poetry install
+❯ poetry shell
+# Install pre-commit hooks
+portfolio-hash-py3.7 ❯ pre-commit install
+# Try running the tests
+portfolio-hash-py3.7 ❯ pytest
 ```
 
 ## Further information

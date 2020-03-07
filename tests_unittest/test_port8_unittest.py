@@ -1,8 +1,8 @@
 # test_port8_unittest.py
 
 import unittest
-from portfolio3 import Portfolio
-import portfolio3
+from portfolio.portfolio3 import Portfolio
+import portfolio.portfolio3
 from types import SimpleNamespace
 
 
@@ -60,8 +60,8 @@ class FakeRequests:
 class PortfolioValueTest(unittest.TestCase):
     def setUp(self):
         # Save the real requests, and install our fake.
-        self.old_requests = portfolio3.requests
-        portfolio3.requests = FakeRequests()
+        self.old_requests = portfolio.portfolio3.requests
+        portfolio.portfolio3.requests = FakeRequests()
 
         self.p = Portfolio()
         self.p.buy("IBM", 100, 120.0)
@@ -72,7 +72,7 @@ class PortfolioValueTest(unittest.TestCase):
 
     def tearDown(self):
         # Restore the real requests.
-        portfolio3.requests = self.old_requests
+        portfolio.portfolio3.requests = self.old_requests
 
 
 # (((end)))

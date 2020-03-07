@@ -67,6 +67,14 @@ This repository was generated from my [template-python repository](https://githu
   - Tests shouldn't affect each other.
   - If one test fails, it shouldn't stop the subsequent tests.
 
+#### Fixtures
+
+- Slide 32
+- Fixtures use [decorators](https://docs.python.org/3/whatsnew/2.4.html#pep-318-decorators-for-functions-and-methods) to create reusable test methods.
+- In [test_port6_pytest.py](tests/test_port6_pytest.py), we use a fixture to initialize class `Portfolio()` with some test data.
+- See [pytest docs on fixtures](https://docs.pytest.org/en/latest/fixture.html).
+- The _conftest.py_ file is normally used for [sharing fixture functions](https://docs.pytest.org/en/latest/fixture.html#conftest-py-sharing-fixture-functions).
+
 ## Repository contents
 
 - [.github/](.github): configuration files for [GitHub](https://github.com/).

@@ -89,6 +89,30 @@ portfolio-hash-py3.7 ❯ coverage run -m pytest tests
 - See [pytest docs on fixtures](https://docs.pytest.org/en/latest/fixture.html).
 - The _conftest.py_ file is normally used for [sharing fixture functions](https://docs.pytest.org/en/latest/fixture.html#conftest-py-sharing-fixture-functions).
 
+### Part 2
+
+#### Coverage
+
+- Coverage is like a test of your tests. It evaluates how much of your production code is actually being run by your tests.
+- It's not always necessary to get to 100% coverage.
+- Even if you are at 100%, it doesn't mean your application works perfectly.
+
+#### Test doubles
+
+- Test doubles stand in for real application data. Useful for simulating application dependencies.
+- In this example, we use some pre-set stock prices as test doubles, instead of calling the stock pricing API. We also replace the Requests API call with a `FakeRequests` method.
+- Mocks are more powerful test doubles. The [pytest-mock](https://github.com/pytest-dev/pytest-mock/) `mocker.patch` fixture can replace (patch) application data with a mock object.
+
+#### Testability
+
+- You may sometimes need to refactor code in order to make it more testable.
+- In particular, it may be helpful to separate code into smaller units.
+
+#### Summing up
+
+- Testing is complicated, important, worthy, and rewarding.
+- The drawings were by Ned's son Ben, including "sleepy snake," the mascot for [coverage.py](https://github.com/nedbat/coveragepy).
+
 ## Repository contents
 
 - [.github/](.github): configuration files for [GitHub](https://github.com/).

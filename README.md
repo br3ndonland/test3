@@ -27,6 +27,20 @@ Meetup description:
 
 This repository was generated from my [template-python repository](https://github.com/br3ndonland/template-python). For more info on template repositories, see [GitHub's announcement](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
 
+## Quickstart
+
+```sh
+❯ cd path/to/repo
+# Install virtual environment with poetry: https://python-poetry.org/docs/
+❯ poetry install
+❯ poetry shell
+# Install pre-commit hooks
+portfolio-hash-py3.7 ❯ pre-commit install
+# Try running the tests
+portfolio-hash-py3.7 ❯ pytest
+portfolio-hash-py3.7 ❯ coverage run -m pytest tests
+```
+
 ## Presentation notes
 
 ### Part 1
@@ -93,19 +107,6 @@ This repository was generated from my [template-python repository](https://githu
 - [poetry.lock](poetry.lock): lock file used by [Poetry](https://python-poetry.org/) to install specific versions of each dependency.
 - [pyproject.toml](pyproject.toml): configuration file for [Poetry](https://python-poetry.org/).
 - [README.md](README.md): this file, a concise description of the repository
-
-## Quickstart
-
-```sh
-❯ cd path/to/repo
-# Install virtual environment with poetry: https://python-poetry.org/docs/
-❯ poetry install
-❯ poetry shell
-# Install pre-commit hooks
-portfolio-hash-py3.7 ❯ pre-commit install
-# Try running the tests
-portfolio-hash-py3.7 ❯ pytest
-```
 
 ## Further information
 

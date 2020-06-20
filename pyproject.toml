@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "portfolio"
-version = "0.1.0"
+version = "0.3.0"
 description = "Getting Started Testing: pytest edition"
 authors = ["Brendon Smith <br3ndonland@protonmail.com>"]
 license = "MIT"

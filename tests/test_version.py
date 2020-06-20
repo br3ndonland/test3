@@ -2,4 +2,5 @@ from portfolio import __version__
 
 
 def test_version():
-    assert __version__ == "0.2.0"
+    """Verify version number in __init__.py."""
+    assert __version__ == "0.3.0"

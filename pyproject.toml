@@ -22,9 +22,14 @@ isort = "*"
 mock = "*"
 mypy = "*"
 pre-commit = "*"
-pytest = "*"
+pytest = "^6"
 pytest-mock = "*"
 requests = "*"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+minversion = "6.0"
+testpaths = ["tests"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

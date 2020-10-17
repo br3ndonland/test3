@@ -35,10 +35,10 @@ This repository was generated from my [template-python repository](https://githu
 ❯ poetry install
 ❯ poetry shell
 # Install pre-commit hooks
-portfolio-hash-py3.7 ❯ pre-commit install
+.venv ❯ pre-commit install
 # Try running the tests
-portfolio-hash-py3.7 ❯ pytest
-portfolio-hash-py3.7 ❯ coverage run -m pytest tests
+.venv ❯ pytest
+.venv ❯ coverage run -m pytest tests
 ```
 
 ## Presentation notes

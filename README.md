@@ -60,8 +60,7 @@ This repository was generated from my [template-python repository](https://githu
 - Project structure (slide 21)
 
   - Put your tests in the _tests/_ directory.
-  - When I moved the tests to the _tests/_ directory, pytest started throwing a `ModuleNotFoundError`. Pytest could find the tests in the _tests/_ directory, but the tests couldn't find the modules they were importing from the root directory. The solution, as explained on [Stack Overflow](https://stackoverflow.com/questions/10253826), is to simply create an empty _conftest.py_ file in the root directory. This seems strange to me.
-  - An alternative recommended in the [pytest docs under "Good Integration practices"](https://docs.pytest.org/en/latest/goodpractices.html) is to create a _setup.py_ file and then run `pip install -e .`. This project doesn't need a separate `setup.py` because it's managed automatically by Poetry.
+  - When I moved the tests to the _tests/_ directory, pytest started throwing a `ModuleNotFoundError`. Pytest could find the tests in the _tests/_ directory, but the tests couldn't find the modules they were importing from the root directory. The solution, as explained on [Stack Overflow](https://stackoverflow.com/questions/10253826), is to simply create an empty _conftest.py_ file in the root directory. The _conftest.py_ file is typically used for storing pytest fixtures, as explained below.
   - When referencing Python modules in different directories, use the syntax `directory.module`. For example:
 
     ```py
@@ -85,9 +84,8 @@ This repository was generated from my [template-python repository](https://githu
 #### Fixtures
 
 - Slide 32
-- Fixtures use [decorators](https://docs.python.org/3/whatsnew/2.4.html#pep-318-decorators-for-functions-and-methods) to create reusable test methods.
+- [pytest fixtures](https://docs.pytest.org/en/latest/fixture.html) use [decorators](https://docs.python.org/3/whatsnew/2.4.html#pep-318-decorators-for-functions-and-methods) to create reusable test methods.
 - In [test_port6_pytest.py](tests/test_port6_pytest.py), we use a fixture to initialize class `Portfolio()` with some test data.
-- See [pytest docs on fixtures](https://docs.pytest.org/en/latest/fixture.html).
 - The _conftest.py_ file is normally used for [sharing fixture functions](https://docs.pytest.org/en/latest/fixture.html#conftest-py-sharing-fixture-functions).
 
 ### Part 2

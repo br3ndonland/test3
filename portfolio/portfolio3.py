@@ -48,7 +48,11 @@ class Portfolio:
         else:
             raise ValueError("You don't own that stock")
 
-    SUFFIX = "&api_token=C5He7fxdnYvFGH2rJHRV47XRzYVjUxkdFPRaVM9ILMvlsoSAmqbggY3VbPgG&output=csv"  # noqa: E501
+    SUFFIX = (
+        "&api_token="
+        "C5He7fxdnYvFGH2rJHRV47XRzYVjUxkdFPRaVM9ILMvlsoSAmqbggY3VbPgG"
+        "&output=csv"
+    )
 
     def current_prices(self):
         """Return a dict mapping names to current prices."""

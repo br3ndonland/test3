@@ -1,12 +1,9 @@
 # test_port9_pytest.py
-
 from types import SimpleNamespace
 
 import pytest
 
 from portfolio.portfolio3 import Portfolio
-
-# import portfolio3
 
 
 def test_empty():
@@ -33,37 +30,27 @@ def test_bad_input():
         p.buy("IBM")
 
 
-@pytest.fixture
-def simple_portfolio():
-    p = Portfolio()
-    p.buy("MSFT", 100, 27.0)
-    p.buy("DELL", 100, 17.0)
-    p.buy("ORCL", 100, 34.0)
-    return p
+def test_sell(simple_portfolio_3):
+    simple_portfolio_3.sell("MSFT", 50)
+    assert simple_portfolio_3.cost() == 6450
 
 
-def test_sell(simple_portfolio):
-    simple_portfolio.sell("MSFT", 50)
-    assert simple_portfolio.cost() == 6450
-
-
-def test_not_enough(simple_portfolio):
+def test_not_enough(simple_portfolio_3):
     with pytest.raises(ValueError):
-        simple_portfolio.sell("MSFT", 200)
+        simple_portfolio_3.sell("MSFT", 200)
 
 
-def test_dont_own_it(simple_portfolio):
+def test_dont_own_it(simple_portfolio_3):
     with pytest.raises(ValueError):
-        simple_portfolio.sell("IBM", 1)
+        simple_portfolio_3.sell("IBM", 1)
 
 
-def test_value(simple_portfolio, mocker):
+def test_value(simple_portfolio_3, mocker):
     req_get = mocker.patch(
         "portfolio.portfolio3.requests.get",
         return_value=SimpleNamespace(text="\nDELL,,,140\nORCL,,,32\nMSFT,,,51\n"),
     )
-    assert simple_portfolio.value() == 22300
-
+    assert simple_portfolio_3.value() == 22300
     assert len(req_get.call_args_list) == 1
     opened_url = req_get.call_args_list[0][0][0]
     assert "api.worldtradingdata.com/api/v1/stock" in opened_url

@@ -61,9 +61,9 @@ class Portfolio:
     # First: the original way, with computation and IO intermixed.
 
     SUFFIX = (
-        "&api_token=",
-        "C5He7fxdnYvFGH2rJHRV47XRzYVjUxkdFPRaVM9ILMvlsoSAmqbggY3VbPgG",
-        "&output=csv",
+        "&api_token="
+        "C5He7fxdnYvFGH2rJHRV47XRzYVjUxkdFPRaVM9ILMvlsoSAmqbggY3VbPgG"
+        "&output=csv"
     )
 
     def current_prices1(self):
@@ -94,7 +94,7 @@ class Portfolio:
     def text_from_url(url):
         return requests.get(url).text
 
-    def current_prices3(self, text_from_url=text_from_url):
+    def current_prices(self, text_from_url=text_from_url):
         """Return a dict mapping names to current prices."""
         url = "https://api.worldtradingdata.com/api/v1/stock?symbol="
         url += ",".join(s[0] for s in sorted(self.stocks))
@@ -105,10 +105,11 @@ class Portfolio:
 
     # Fourth: separate methods for each phase.
 
-    def current_prices(self):
+    def current_prices4(self):
         """
         TODO: are build_url() and dict_from_csv() defined?
         """
-        url = self.build_url()
-        data = self.text_from_url(url)
-        return self.dict_from_csv(data)
+        # return self.dict_from_csv(data)
+        # url = self.build_url()
+        # data = self.text_from_url(url)
+        pass

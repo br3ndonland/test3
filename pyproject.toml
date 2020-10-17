@@ -23,11 +23,12 @@ mock = "*"
 mypy = "*"
 pre-commit = "*"
 pytest = "^6"
+pytest-cov = "*"
 pytest-mock = "*"
 requests = "*"
 
 [tool.pytest.ini_options]
-addopts = "-q"
+addopts = "--cov=portfolio -q"
 minversion = "6.0"
 testpaths = ["tests"]
 

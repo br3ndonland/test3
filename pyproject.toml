@@ -1,3 +1,7 @@
+[tool.isort]
+profile = "black"
+src_paths = ["portfolio", "tests"]
+
 [tool.poetry]
 name = "portfolio"
 version = "0.3.0"
@@ -14,6 +18,7 @@ python = "^3.8"
 black = { version = "*", allow-prereleases = true }
 coverage = "*"
 flake8 = "*"
+isort = "*"
 mock = "*"
 mypy = "*"
 pre-commit = "*"

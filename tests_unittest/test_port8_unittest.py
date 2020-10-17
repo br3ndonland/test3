@@ -1,9 +1,10 @@
 # test_port8_unittest.py
 
 import unittest
-from portfolio.portfolio3 import Portfolio
-import portfolio.portfolio3
 from types import SimpleNamespace
+
+import portfolio.portfolio3
+from portfolio.portfolio3 import Portfolio
 
 
 class PortfolioTest(unittest.TestCase):

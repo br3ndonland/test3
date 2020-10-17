@@ -1,5 +1,4 @@
 # test_port2_pytest.py
-
 from portfolio.portfolio1 import Portfolio
 
 

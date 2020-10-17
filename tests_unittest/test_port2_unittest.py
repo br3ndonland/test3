@@ -1,6 +1,7 @@
 # test_port2_unittest.py
 
 import unittest
+
 from portfolio.portfolio1 import Portfolio
 
 

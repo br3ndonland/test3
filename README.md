@@ -113,25 +113,6 @@ This repository was generated from my [template-python repository](https://githu
 - Testing is complicated, important, worthy, and rewarding.
 - The drawings were by Ned's son Ben, including "sleepy snake," the mascot for [coverage.py](https://github.com/nedbat/coveragepy).
 
-## Repository contents
-
-- [.github/](.github): configuration files for [GitHub](https://github.com/).
-  - [ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE)
-    - [bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md): template for filing a bug report issue on GitHub.
-    - [feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md): template for filing a feature request issue on GitHub.
-  - [workflows/](.github/workflows)
-    - [pre-commit.yml](.github/workflows/pre-commit.yml): [GitHub Actions](https://github.com/features/actions) workflow that runs the pre-commit hooks specified in [.pre-commit-config.yaml](.pre-commit-config.yaml).
-    - [test.yml](.github/workflows/test.yml): [GitHub Actions](https://github.com/features/actions) workflow that runs Python tests.
-  - [CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md): guidelines for behavior when contributing to open-source projects.
-  - [CONTRIBUTING.md](.github/CONTRIBUTING.md): detailed instructions for using this repository.
-  - [PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md): template for submitting [GitHub pull requests](.github/CONTRIBUTING.md).
-- [.vscode/settings.json](.vscode/settings.json): default settings for [VSCode](https://code.visualstudio.com/).
-- [.pre-commit-config.yaml](.pre-commit-config.yaml): configuration file for [pre-commit](https://pre-commit.com/) specifying [Git pre-commit hooks](https://www.git-scm.com/docs/githooks).
-- [LICENSE](LICENSE): [license](https://choosealicense.com/) file describing how the repository may be legally used.
-- [poetry.lock](poetry.lock): lock file used by [Poetry](https://python-poetry.org/) to install specific versions of each dependency.
-- [pyproject.toml](pyproject.toml): configuration file for [Poetry](https://python-poetry.org/).
-- [README.md](README.md): this file, a concise description of the repository
-
 ## Further information
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md).

@@ -4,7 +4,7 @@ src_paths = ["portfolio", "tests"]
 
 [tool.poetry]
 name = "portfolio"
-version = "0.4.0"
+version = "0.5.0"
 description = "Getting Started Testing: pytest edition"
 authors = ["Brendon Smith <br3ndonland@protonmail.com>"]
 license = "MIT"

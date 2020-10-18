@@ -44,12 +44,3 @@ def simple_portfolio_3():
     p.buy("DELL", 100, 17.0)
     p.buy("ORCL", 100, 34.0)
     return p
-
-
-@pytest.fixture
-def simple_portfolio_4():
-    p = portfolio.portfolio4.Portfolio()
-    p.buy("MSFT", 100, 27.0)
-    p.buy("DELL", 100, 17.0)
-    p.buy("ORCL", 100, 34.0)
-    return p

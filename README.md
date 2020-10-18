@@ -5,6 +5,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 [![hooks](https://github.com/br3ndonland/test3/workflows/hooks/badge.svg)](https://github.com/br3ndonland/test3/actions)
 [![tests](https://github.com/br3ndonland/test3/workflows/tests/badge.svg)](https://github.com/br3ndonland/test3/actions)
+[![codecov](https://codecov.io/gh/br3ndonland/test3/branch/master/graph/badge.svg)](https://codecov.io/gh/br3ndonland/test3)
 
 Brendon Smith ([br3ndonland](https://github.com/br3ndonland/))
 
